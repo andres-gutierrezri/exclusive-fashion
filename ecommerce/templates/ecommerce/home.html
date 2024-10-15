@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa Online</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS (enlace compatible con Django) -->
+    <link rel="stylesheet" href="{% static 'ecommerce/css/home.css' %}">
+    <!-- Bootstrap 5 JS and Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white py-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="h3 title-font mb-0">Exclusive Fashion</h1> <!-- Título con fuente estilizada -->
+                <img src="{% static 'ecommerce/images/logo.png' %}" alt="Logo de la empresa" class="logo"> <!-- Logo con enlace estático -->
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-2">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link active" href="{% url 'inicio' %}">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'productos' %}">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'ofertas' %}">Ofertas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <aside class="col-md-3">
+                <h2>Categorías</h2>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="{% url 'hombres' %}">Hombres</a></li>
+                    <li class="list-group-item"><a href="{% url 'mujeres' %}">Mujeres</a></li>
+                    <li class="list-group-item"><a href="{% url 'infantil' %}">Niños</a></li>
+                </ul>
+            </aside>
+            <section class="col-md-9">
+                <h2 class="text-center">Productos Destacados</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="{% static 'ecommerce/images/falda-casual.jpeg' %}" class="card-img-top uniform-img" alt="Falda Casual"> <!-- Enlace estático a la imagen -->
+                            <div class="card-body">
+                                <h5 class="card-title">Falda Casual</h5>
+                                <p class="card-text">Falda Juvenil</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="{% static 'ecommerce/images/blusa-elegante.jpeg' %}" class="card-img-top uniform-img" alt="Blusa Elegante"> <!-- Enlace estático a la imagen -->
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa Elegante</h5>
+                                <p class="card-text">Blusa Juvenil</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="{% static 'ecommerce/images/vestido-noche.jpeg' %}" class="card-img-top uniform-img" alt="Vestido de Noche"> <!-- Enlace estático a la imagen -->
+                            <div class="card-body">
+                                <h5 class="card-title">Vestido de Noche</h5>
+                                <p class="card-text">Vestido Juvenil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Tienda de Ropa Online. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Create Account Form -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card p-4">
+                    <h2 class="text-center">Crear Cuenta</h2>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Nombre de usuario" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="Contraseña" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="Confirmar contraseña" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Crear Cuenta</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Login Form -->
+            <div class="col-md-6">
+                <div class="card p-4">
+                    <h2 class="text-center">Iniciar Sesión</h2>
+                    <form>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="Contraseña" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

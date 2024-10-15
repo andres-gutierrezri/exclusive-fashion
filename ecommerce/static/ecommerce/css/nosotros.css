@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+.about-us {
+  background-color: #f5f5f5; /* Fondo gris claro */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-us h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: garamond;
+}
+
+.about-us .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-us .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-us .about-text {
+  flex: 1;
+  min-width: 300px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.about-us .about-text p {
+  margin-bottom: 20px;
+}
+
+.about-us .about-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-us .about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .about-us .content {
+    flex-direction: column;
+  }
+
+  .about-us .about-image {
+    margin-top: 20px;
+  }
+}
+
+header {
+  background-color: #333;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-right: 0;
+}
+
+.logo img {
+  height: 50px; /* Ajusta el tamaño del logo */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #f0eaea;
+  position: relative;
+  padding: 10px 15px;
+  margin-right: 15px;
+}
+
+nav a:hover {
+  color: #ebe5e5;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #333;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #555050;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(236, 233, 233, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: Arial, sans-serif;
+  color: #e7e2e2;
+  transition: background-color 0.3s;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Mostrar el menú desplegable al hacer hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Personalizar botones */
+.dropdown-content a {
+  background-color: #312f2f;
+  color: rgb(236, 227, 227);
+  border-radius: 4px;
+  margin: 5px 10px;
+  padding: 10px;
+}
+
+/* Cambiar color al hacer hover sobre los botones */
+.dropdown-content a:hover {
+  background-color: #fdfdfd;
+}
+
+/* Estilo del texto en Account */
+.dropdown a {
+  color: #fcf8f8;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+}
+
+/* Añadir un pequeño efecto de transición */
+.dropdown a:hover {
+  color: #555;
+}
+
+footer {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 40px 20px;
+}
+
+.cta {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta:hover {
+  background-color: #555;
+}

@@ -1,0 +1,180 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working beauty from the inside out</title>
+    <!-- Enlace al archivo CSS estático -->
+    <link rel="stylesheet" href="{% static 'ecommerce/css/prueba.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Enlace al logo usando archivos estáticos -->
+            <img src="{% static 'ecommerce/images/logo.png' %}" alt="Logo">
+        </div>
+        <nav>
+            <a href="{% url 'inicio' %}">Inicio</a>
+            <div class="dropdown">
+                <a href="#">Tienda</a>
+                <div class="dropdown-content">
+                    <a href="{% url 'hombres' %}">Hombres</a>
+                    <a href="{% url 'mujeres' %}">Mujeres</a>
+                    <a href="{% url 'infantil' %}">Niños</a>
+                </div>
+            </div>
+            <a href="{% url 'ofertas' %}">Ofertas</a>
+            <a href="{% url 'nosotros' %}">Sobre nosotros</a>
+        </nav>
+        <div>
+            <a href="#" class="cta">Contáctenos</a>
+            <a href="#">Q</a>
+            <div class="dropdown">
+                <a href="#">Account</a>
+                <div class="dropdown-content">
+                    <a href="{% url 'login' %}">Iniciar Sesión</a>
+                    <a href="{% url 'crear_cuenta' %}">Crear Cuenta</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de características -->
+    <div class="features">
+        <div class="feature">
+            <i class="fas fa-dollar-sign"></i>
+            <span>Precio bajo garantizado</span>
+        </div>
+        <div class="feature">
+            <i class="fas fa-shopping-cart"></i>
+            <span>30 días para devoluciones en línea</span>
+        </div>
+        <div class="feature">
+            <i class="fas fa-truck"></i>
+            <span>Envío estándar</span>
+        </div>
+    </div>
+
+    <!-- Sección de imagen hero -->
+    <div class="hero">
+        <img src="{% static 'ecommerce/images/inicio.png' %}" alt="Hero Image">
+    </div>
+
+    <!-- Sección de bienvenida -->
+    <div class="welcome-section">
+        <h1><center>BIENVENIDOS A EXCLUSIVE FASHION</center></h1>
+        <p>Somos una empresa llena de jóvenes que buscan tener un gran impacto en la comunidad</p>
+    </div>
+
+    <!-- Sección de productos para mujeres -->
+    <div class="container">
+        <div class="left">
+            <img src="{% static 'ecommerce/images/abrigo.jpeg' %}" alt="Mujer" class="main-image">
+        </div>
+        <div class="center">
+            <h1>MUJER</h1>
+            <p>Descubre productos básicos y prácticos...</p>
+            <a href="{% url 'mujeres' %}"><button>Ver Todo</button></a>
+        </div>
+        <div class="right">
+            <img src="{% static 'ecommerce/images/buso-1.jpeg' %}" alt="Producto 1" class="product-image">
+            <img src="{% static 'ecommerce/images/crop-top-1.jpeg' %}" alt="Producto 2" class="product-image">
+            <img src="{% static 'ecommerce/images/zapato-1.jpeg' %}" alt="Producto 3" class="product-image">
+        </div>
+    </div>
+
+    <!-- Sección de productos para hombres -->
+    <div class="container">
+        <div class="left">
+            <img src="{% static 'ecommerce/images/pantalon-1.jpeg' %}" alt="Hombre" class="h-image">
+        </div>
+        <div class="center">
+            <h1>HOMBRE</h1>
+            <p>Explora una amplia variedad de accesorios...</p>
+            <a href="{% url 'hombres' %}"><button>Ver Todo</button></a>
+        </div>
+        <div class="right">
+            <img src="{% static 'ecommerce/images/zapato-2.jpeg' %}" alt="Producto 1" class="product-image">
+            <img src="{% static 'ecommerce/images/buso-2.jpeg' %}" alt="Producto 2" class="product-image">
+            <img src="{% static 'ecommerce/images/gorro.jpeg' %}" alt="Producto 3" class="product-image">
+        </div>
+    </div>
+
+    <!-- Sección de productos destacados -->
+    <div class="Destacados">
+        <h1><center>PRODUCTOS DESTACADOS</center></h1>
+    </div>
+
+    <!-- Grid de productos -->
+    <main class="main-content">
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="{% static 'ecommerce/images/camisa-1.jpeg' %}" alt="Camisa clásica">
+                <h3>Camisa Clásica</h3>
+                <p>$30.00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="{% static 'ecommerce/images/pantalon-2.jpeg' %}" alt="Pantalón casual">
+                <h3>Pantalón Casual</h3>
+                <p>$40.00</p>
+                <button>Comprar</button>
+            </div>
+            <!-- Más productos -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Sección de suscripción -->
+        <div class="subscription-section">
+            <h2>Suscríbete y recibe el 10% de descuento...</h2>
+            <form class="subscription-form">
+                <input type="email" placeholder="Escribe tu correo electrónico" required>
+                <button type="submit">➤</button>
+                <div class="checkboxes">
+                    <label>
+                        <input type="checkbox" required>
+                        He leído y acepto la <a href="#">autorización para tratamiento de datos personales</a>.
+                    </label>
+                    <label>
+                        <input type="checkbox" required>
+                        He leído y aceptado la <a href="#">autorización para el uso de canales en la gestión de cobranza y publicidad</a>.
+                    </label>
+                </div>
+            </form>
+        </div>
+
+        <!-- Información de contacto -->
+        <div class="footer-section">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p>mail: lapercha@gmail.com</p>
+                <p>Dirección: Cra. 68D #13 - 54, Int 7</p>
+                <p>Nit: 860.066.471-1</p>
+                <p>Razón social: Marroquinera S.A.S.</p>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="social-media">
+                <h3>Redes sociales</h3>
+                <div class="icons">
+                    <a href="#"><img src="{% static 'ecommerce/images/facebook.jpeg' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'ecommerce/images/instagram.jpeg' %}" alt="Instagram"></a>
+                    <a href="#"><img src="{% static 'ecommerce/images/pinterest.jpeg' %}" alt="Pinterest"></a>
+                    <!-- Más redes sociales -->
+                </div>
+            </div>
+
+            <!-- Métodos de pago -->
+            <div class="payment-methods">
+                <h3>Medios de Pago</h3>
+                <img src="{% static 'ecommerce/images/pagos.jpeg' %}" alt="Medios de Pago">
+            </div>
+        </div>
+
+        <p>&copy; 2024 Tienda de Ropa Online. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

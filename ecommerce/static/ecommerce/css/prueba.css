@@ -1,0 +1,498 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #333;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-right: 0;
+}
+
+.logo img {
+  height: 50px; /* Ajusta el tamaño del logo */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #f0eaea;
+  position: relative;
+  padding: 10px 15px;
+  margin-right: 15px;
+}
+
+nav a:hover {
+  color: #ebe5e5;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #333;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.cta {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta:hover {
+  background-color: #555;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+}
+
+.feature i {
+  margin-right: 0.5rem;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+  background-color: #f0f0f0;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  margin-left: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.welcome-section {
+  margin-top: 50px;
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: Garamond;
+}
+
+.welcome-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 800px;
+  color: #444040;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #555050;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(236, 233, 233, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: Arial, sans-serif;
+  color: #e7e2e2;
+  transition: background-color 0.3s;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Mostrar el menú desplegable al hacer hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Personalizar botones */
+.dropdown-content a {
+  background-color: #312f2f;
+  color: rgb(236, 227, 227);
+  border-radius: 4px;
+  margin: 5px 10px;
+  padding: 10px;
+}
+
+/* Cambiar color al hacer hover sobre los botones */
+.dropdown-content a:hover {
+  background-color: #fdfdfd;
+}
+
+/* Estilo del texto en Account */
+.dropdown a {
+  color: #fcf8f8;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+}
+
+/* Añadir un pequeño efecto de transición */
+.dropdown a:hover {
+  color: #555;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.left,
+.center,
+.right {
+  flex: 1;
+  padding: 100px;
+}
+
+.main-image {
+  width: 100%;
+  height: 80%;
+}
+
+.h-image {
+  width: 100%;
+  height: 80%;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-family: Garamond;
+}
+
+.center p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.center button {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.product-image {
+  width: auto;
+  height: 200px; /* Ajusta según la altura deseada */
+  margin-bottom: 10px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.center {
+  text-align: center;
+  padding: 50px;
+}
+
+.product-image {
+  width: auto;
+  height: 200px; /* Ajusta según la altura deseada */
+  margin-bottom: 10px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-image {
+    width: 80%;
+    height: auto;
+  }
+}
+
+.center {
+  text-align: center;
+  padding: 50px;
+}
+
+.container .left,
+.container .right {
+  padding: 20px;
+}
+
+.container .left,
+.container .right {
+  padding: 20px;
+}
+.Destacados {
+  margin-top: 70px;
+}
+
+.Destacados h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: Garamond;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto; /* Permite desplazarse si hay muchos productos */
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.product-card button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #0056b3;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 40px 20px;
+}
+
+.subscription-section {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.subscription-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.subscription-section p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.subscription-form input[type="email"] {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.subscription-form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscription-form button:hover {
+  background-color: #555;
+}
+
+.checkboxes {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.checkboxes label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.checkboxes a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px; /* Incremento del espacio entre las secciones */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Garamond;
+}
+
+.contact-info,
+.extra-links,
+.social-media,
+.payment-methods {
+  flex: 1;
+  min-width: 200px; /* Para evitar que las secciones sean demasiado pequeñas */
+  margin: 20px;
+  text-align: left;
+}
+
+.contact-info p,
+.extra-links a {
+  margin-bottom: 10px;
+  font-family: Garamond;
+}
+
+.extra-links a {
+  display: block;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
+.social-media .icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-media img {
+  width: 30px;
+  height: 30px;
+}
+
+.payment-methods img {
+  width: 100%;
+  max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info,
+  .extra-links,
+  .social-media,
+  .payment-methods {
+    width: 100%;
+    text-align: center;
+  }
+}

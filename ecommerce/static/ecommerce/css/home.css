@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif; /* Tipografía llamativa e interactiva para todo el sitio */
+    background-color: #f8f9fa; /* Fondo suave */
+    color: #333; /* Color de texto general */
+}
+
+/* Header Styles */
+.title-font {
+    font-family: 'Dancing Script', cursive; /* Fuente estilizada para el título */
+    font-size: 2.5rem; /* Tamaño grande para destacarlo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto para hacerlo dinámico */
+    text-align: center; /* Centrado del título */
+}
+
+header .logo {
+    max-width: 150px; /* Tamaño máximo del logo */
+    height: auto; /* Mantener proporción */
+}
+
+/* Uniform Image Proportions */
+.uniform-img {
+    width: 100%; /* Ancho completo */
+    height: 300px; /* Altura uniforme para todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción de la imagen y rellena el contenedor */
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f8d7da; /* Color hover de los enlaces */
+}
+
+/* Sidebar Styles */
+aside h2 {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 0.5rem;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #343a40;
+    font-weight: bold;
+}
+
+aside ul li a:hover {
+    color: #007bff;
+}
+
+/* Card Styles */
+.card {
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Animación de escala */
+}
+
+.card-body {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+/* Form Styles */
+.form-container {
+    margin-top: 2rem;
+}
+
+.form h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #343a40;
+    text-transform: uppercase;
+}
+
+.form input {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.form button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .uniform-img {
+        height: 200px; /* Altura más pequeña en pantallas móviles */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.875rem;
+    }
+
+    header .title-font {
+        font-size: 2rem; /* Ajuste de tamaño de fuente para pantallas pequeñas */
+    }
+}
